@@ -31,7 +31,7 @@ class PrototypesController < ApplicationController
   def update
     @prototype = Prototype.find(params[:id])
     @prototype.update(prototype_params)
-    render :show
+    redirect_to prototype_path(@prototype)
   end
 
   def destroy
